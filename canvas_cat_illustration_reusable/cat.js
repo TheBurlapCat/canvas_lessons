@@ -1,10 +1,10 @@
 var canvas = document.getElementById('catIllustration');
 var renderingContext = canvas.getContext('2d');
 
-var drawCat = function(context, x, y){
+var drawCat = function(context, x, y, scale){
 	context.save();
 	context.translate(x, y);
-	context.scale(0.25, 0.25);
+	context.scale(scale, scale);
 	context.translate(-400, -400);
 
 
@@ -173,11 +173,11 @@ var drawCat = function(context, x, y){
 };
 
 
-drawCat(renderingContext, 100, 100);
-drawCat(renderingContext, 300, 300);
-drawCat(renderingContext, 500, 700);
-drawCat(renderingContext, 100, 500);
-drawCat(renderingContext, 300, 700);
-drawCat(renderingContext, 700, 100);
-drawCat(renderingContext, 650, 500);
+drawCat(renderingContext, 100, 100, 0.25);
+drawCat(renderingContext, 300, 300, 0.35);
+drawCat(renderingContext, 500, 700, 0.45);
+drawCat(renderingContext, 100, 500, 0.15);
+drawCat(renderingContext, 300, 700, 0.05);
+drawCat(renderingContext, 700, 100, 0.10);
+drawCat(renderingContext, 650, 500, 0.40);
 
